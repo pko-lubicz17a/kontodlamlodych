@@ -32,8 +32,12 @@ h2{color:var(--navy);font-size:1.1rem;margin:0 0 10px}
 .acts a{flex:1 1 120px;text-align:center;text-decoration:none;font-weight:700;padding:9px 12px;border-radius:999px;white-space:nowrap}
 .call{background:var(--red);color:#fff}.wab{background:#25D366;color:#073b1c}
 footer{font-size:.8rem;color:#666;text-align:center;padding:10px 18px 28px}footer a{color:#555}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.langs{display:flex;gap:4px}.langs button{border:1px solid #ccd;background:#fff;color:var(--navy);border-radius:8px;padding:5px 7px;font-weight:700;font-size:.8rem;cursor:pointer}
+.langs button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+html:not([lang=pl]) .badge{background:var(--red);font-size:.8rem;padding:3px 9px}
 </style></head><body><div class="wrap">
-<header><svg class="logo" role="img" aria-label="PKO Bank Polski" version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<header class="top"><svg class="logo" role="img" aria-label="PKO Bank Polski" version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 152.126 52.636" style="enable-background:new 0 0 152.126 52.636;" xml:space="preserve">
 <g id="logo">
 	<g>
@@ -99,42 +103,64 @@ footer{font-size:.8rem;color:#666;text-align:center;padding:10px 18px 28px}foote
 </g>
 <g id="pole_ochronne">
 </g>
-</svg></header>
+</svg><nav class="langs"><button data-l="pl" aria-label="Polski">🇵🇱 PL</button><button data-l="en" aria-label="English">🇬🇧 EN</button><button data-l="uk" aria-label="Українська">🇺🇦 UA</button></nav></header>
 <div class="hero">
-<h1>Otwórz konto w PKO Banku Polskim i <span>odbierz torbę</span></h1>
-<img src="torba.jpg" alt="Czarna torba z czerwonymi uchwytami i napisem dzień dobry" width="1000" height="999">
-<p class="lead">Wybierz z doradcą jedno z trzech kont.</p>
+<h1 data-i18n-html="h1">Otwórz konto w PKO Banku Polskim i <span>odbierz torbę</span></h1>
+<img src="torba.jpg" data-i18n-alt="alt" alt="Czarna torba z czerwonymi uchwytami i napisem dzień dobry" width="1000" height="999">
+<p class="lead" data-i18n="lead">Wybierz z doradcą jedno z trzech kont.</p>
 <div class="accs">
-<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-za-zero" target="_blank" rel="noopener"><span><b>Konto za zero</b><small>Dla każdego</small></span><i>›</i></a>
-<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-dla-mlodych" target="_blank" rel="noopener"><span><b>Konto dla Młodych</b><small>Od 13 do 26 lat</small></span><i>›</i></a>
-<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-bez-granic" target="_blank" rel="noopener"><span><b>Konto bez granic</b><small>Płatności w wielu walutach</small></span><i>›</i></a>
+<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-za-zero" target="_blank" rel="noopener"><span><b>Konto za zero</b><small data-i18n="a1">Dla każdego</small></span><i>›</i></a>
+<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-dla-mlodych" target="_blank" rel="noopener"><span><b>Konto dla Młodych</b><small data-i18n="a2">Od 13 do 26 lat</small></span><i>›</i></a>
+<a class="acc" href="https://www.pkobp.pl/klient-indywidualny/konta/konto-bez-granic" target="_blank" rel="noopener"><span><b>Konto bez granic</b><small data-i18n="a3">Płatności w wielu walutach</small></span><i>›</i></a>
 </div>
-<p class="where">📍 Tylko w Oddziale 1 w Krakowie, ul. Lubicz 17A.</p>
+<p class="where" data-i18n="where">📍 Tylko w Oddziale 1 w Krakowie, ul. Lubicz 17A.</p>
 </div>
 <div class="cta">
-<a id="wa" class="btn btn-wa" href="#" target="_blank" rel="noopener">💬 Umów wizytę na WhatsAppie</a>
-<a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=PKO+Bank+Polski+ul.+Lubicz+17A+Krak%C3%B3w" target="_blank" rel="noopener">🧭 Wyznacz trasę</a>
+<a id="wa" class="btn btn-wa" href="#" target="_blank" rel="noopener" data-i18n="wa">💬 Umów wizytę na WhatsAppie</a>
+<a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=PKO+Bank+Polski+ul.+Lubicz+17A+Krak%C3%B3w" target="_blank" rel="noopener" data-i18n="route">🧭 Wyznacz trasę</a>
 </div>
 <div class="info">
-<p>🕘 Od poniedziałku do piątku 9:00 do 17:00</p>
-<p>🎁 Torbę dostaniesz za konto otwarte na miejscu w tym oddziale. Liczba toreb jest ograniczona.</p>
-<div class="intl"><p lang="pl">🇵🇱 Jesteś z zagranicy? Weź paszport, doradca mówi po angielsku.</p>
-<p lang="en">🇬🇧 From abroad? Bring your passport, our advisor speaks English.</p>
-<p lang="uk">🇺🇦 Приїхали з іншої країни? Візьміть паспорт, консультант говорить англійською.</p></div>
+<p data-i18n="hours">🕘 Od poniedziałku do piątku 9:00 do 17:00</p>
+<p data-i18n="doc">🪪 Weź dowód osobisty albo paszport.</p>
+<p data-i18n="bag">🎁 Torbę dostaniesz za konto otwarte na miejscu w tym oddziale. Liczba toreb jest ograniczona.</p>
 </div>
 <section>
-<h2>📞 Doradcy</h2>
-<div class="adv"><div><b>Aneta Maniecka</b><span class="num">666 824 496</span></div><div class="acts"><a class="call" href="tel:+48666824496">📞 Zadzwoń</a><a class="wab" href="https://wa.me/48666824496?text=Dzie%C5%84%20dobry%20Pani%20Aneto%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20otworzy%C4%87%20konto%20w%20PKO%20Banku%20Polskim%20w%20Oddziale%201%20przy%20Lubicz%2017A%20i%20odebra%C4%87%20torb%C4%99.%20Kiedy%20mog%C4%99%20przyj%C5%9B%C4%87%3F" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
-<div class="adv"><div><b>Anna Opyrchal</b><span class="num">666 820 457</span></div><div class="acts"><a class="call" href="tel:+48666820457">📞 Zadzwoń</a><a class="wab" href="https://wa.me/48666820457?text=Dzie%C5%84%20dobry%20Pani%20Anno%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20otworzy%C4%87%20konto%20w%20PKO%20Banku%20Polskim%20w%20Oddziale%201%20przy%20Lubicz%2017A%20i%20odebra%C4%87%20torb%C4%99.%20Kiedy%20mog%C4%99%20przyj%C5%9B%C4%87%3F" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
-<div class="adv"><div><b>Sylwia Baj</b> <span class="badge">English</span><span class="num">666 823 594</span></div><div class="acts"><a class="call" href="tel:+48666823594">📞 Zadzwoń</a><a class="wab" href="https://wa.me/48666823594?text=Dzie%C5%84%20dobry%20Pani%20Sylwio%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20otworzy%C4%87%20konto%20w%20PKO%20Banku%20Polskim%20w%20Oddziale%201%20przy%20Lubicz%2017A%20i%20odebra%C4%87%20torb%C4%99.%20Kiedy%20mog%C4%99%20przyj%C5%9B%C4%87%3F" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
-<div class="adv"><div><b>Julia Miczek</b><span class="num">693 062 047</span></div><div class="acts"><a class="call" href="tel:+48693062047">📞 Zadzwoń</a><a class="wab" href="https://wa.me/48693062047?text=Dzie%C5%84%20dobry%20Pani%20Julio%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20otworzy%C4%87%20konto%20w%20PKO%20Banku%20Polskim%20w%20Oddziale%201%20przy%20Lubicz%2017A%20i%20odebra%C4%87%20torb%C4%99.%20Kiedy%20mog%C4%99%20przyj%C5%9B%C4%87%3F" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
+<h2 data-i18n="adv">📞 Doradcy</h2>
+<div class="adv"><div><b>Aneta Maniecka</b><span class="num">666 824 496</span></div><div class="acts"><a class="call" href="tel:+48666824496" data-i18n="call">📞 Zadzwoń</a><a class="wab" data-wa="0" href="https://wa.me/48666824496" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
+<div class="adv"><div><b>Anna Opyrchal</b><span class="num">666 820 457</span></div><div class="acts"><a class="call" href="tel:+48666820457" data-i18n="call">📞 Zadzwoń</a><a class="wab" data-wa="1" href="https://wa.me/48666820457" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
+<div class="adv"><div><b>Sylwia Baj</b> <span class=badge data-i18n=eng>English</span><span class="num">666 823 594</span></div><div class="acts"><a class="call" href="tel:+48666823594" data-i18n="call">📞 Zadzwoń</a><a class="wab" data-wa="2" href="https://wa.me/48666823594" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
+<div class="adv"><div><b>Julia Miczek</b><span class="num">693 062 047</span></div><div class="acts"><a class="call" href="tel:+48693062047" data-i18n="call">📞 Zadzwoń</a><a class="wab" data-wa="3" href="https://wa.me/48693062047" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>
 </section>
-<footer><a href="https://www.pkobp.pl/klient-indywidualny/konta/" target="_blank" rel="noopener">Wszystkie konta na pkobp.pl</a><br>Materiał informacyjny. PKO Bank Polski S.A.</footer>
+<footer><a href="https://www.pkobp.pl/klient-indywidualny/konta/" target="_blank" rel="noopener" data-i18n="all">Wszystkie konta na pkobp.pl</a><br><span data-i18n="legal">Materiał informacyjny. PKO Bank Polski S.A.</span></footer>
 </div>
 <script>
-/* === NUMER WHATSAPP: zmień tutaj (format międzynarodowy, same cyfry) === */
+/* === NUMER WHATSAPP głównego przycisku (Aneta) === */
 const WHATSAPP_NUMBER = "48666824496";
-const WHATSAPP_TEXT = "Dzień dobry Pani Aneto, chciałbym/chciałabym otworzyć konto w PKO Banku Polskim w Oddziale 1 przy Lubicz 17A i odebrać torbę. Kiedy mogę przyjść?";
-document.getElementById("wa").href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_TEXT);
+const ADV = [["48666824496",{pl:"Aneto",en:"Aneta",uk:"Ането"}],["48666820457",{pl:"Anno",en:"Anna",uk:"Анно"}],["48666823594",{pl:"Sylwio",en:"Sylwia",uk:"Сильвіє"}],["48693062047",{pl:"Julio",en:"Julia",uk:"Юліє"}]];
+const MSG = {
+ pl: n => "Dzień dobry Pani " + n + ", chciałbym/chciałabym otworzyć konto w PKO Banku Polskim w Oddziale 1 przy Lubicz 17A i odebrać torbę. Kiedy mogę przyjść?",
+ en: n => "Hello Ms " + n + ", I would like to open an account at PKO Bank Polski, Branch 1, Lubicz 17A, and collect the bag. When can I come?",
+ uk: n => "Добрий день, пані " + n + "! Я хочу відкрити рахунок у PKO Bank Polski, у відділенні 1 на Lubicz 17A, і отримати сумку. Коли я можу прийти?"
+};
+const T = {
+ pl: {title:"Otwórz konto i odbierz torbę | PKO Bank Polski, Oddział 1 Kraków", h1:"Otwórz konto w PKO Banku Polskim i <span>odbierz torbę</span>", alt:"Czarna torba z czerwonymi uchwytami i napisem dzień dobry", lead:"Wybierz z doradcą jedno z trzech kont.", a1:"Dla każdego", a2:"Od 13 do 26 lat", a3:"Płatności w wielu walutach", where:"📍 Tylko w Oddziale 1 w Krakowie, ul. Lubicz 17A.", wa:"💬 Umów wizytę na WhatsAppie", route:"🧭 Wyznacz trasę", hours:"🕘 Od poniedziałku do piątku 9:00 do 17:00", doc:"🪪 Weź dowód osobisty albo paszport.", bag:"🎁 Torbę dostaniesz za konto otwarte na miejscu w tym oddziale. Liczba toreb jest ograniczona.", adv:"📞 Doradcy", call:"📞 Zadzwoń", eng:"English", all:"Wszystkie konta na pkobp.pl", legal:"Materiał informacyjny. PKO Bank Polski S.A."},
+ en: {title:"Open an account and get a bag | PKO Bank Polski, Branch 1 Kraków", h1:"Open an account at PKO Bank Polski and <span>get a free bag</span>", alt:"Black tote bag with red handles and the words dzień dobry", lead:"Choose one of three accounts with our advisor.", a1:"For everyone", a2:"Aged 13 to 26", a3:"Payments in many currencies", where:"📍 Only at Branch 1 in Kraków, ul. Lubicz 17A.", wa:"💬 Book a visit on WhatsApp", route:"🧭 Get directions", hours:"🕘 Monday to Friday, 9:00 to 17:00", doc:"🪪 Bring your passport or ID card.", bag:"🎁 You get the bag for an account opened in person at this branch. Limited number of bags.", adv:"📞 Our advisors", call:"📞 Call", eng:"🇬🇧 English speaking", all:"All accounts at pkobp.pl", legal:"Information material. PKO Bank Polski S.A."},
+ uk: {title:"Відкрийте рахунок і отримайте сумку | PKO Bank Polski, відділення 1 Краків", h1:"Відкрийте рахунок у PKO Bank Polski і <span>отримайте сумку</span>", alt:"Чорна сумка з червоними ручками і написом dzień dobry", lead:"Оберіть з консультантом один із трьох рахунків.", a1:"Для всіх", a2:"Від 13 до 26 років", a3:"Платежі в різних валютах", where:"📍 Лише у відділенні 1 у Кракові, ul. Lubicz 17A.", wa:"💬 Записатися у WhatsApp", route:"🧭 Прокласти маршрут", hours:"🕘 З понеділка по пʼятницю, з 9:00 до 17:00", doc:"🪪 Візьміть паспорт або посвідку.", bag:"🎁 Сумку отримаєте за рахунок, відкритий особисто в цьому відділенні. Кількість сумок обмежена.", adv:"📞 Консультанти", call:"📞 Подзвонити", eng:"🇬🇧 Говорить англійською", all:"Усі рахунки на pkobp.pl", legal:"Інформаційний матеріал. PKO Bank Polski S.A."}
+};
+function setLang(l){
+ if(!T[l]) l="pl"; const d=T[l];
+ document.documentElement.lang=l; document.title=d.title;
+ document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=d[e.dataset.i18n]);
+ document.querySelectorAll("[data-i18n-html]").forEach(e=>e.innerHTML=d[e.dataset.i18nHtml]);
+ document.querySelectorAll("[data-i18n-alt]").forEach(e=>e.alt=d[e.dataset.i18nAlt]);
+ document.querySelectorAll("[data-wa]").forEach(e=>{const a=ADV[+e.dataset.wa];e.href="https://wa.me/"+a[0]+"?text="+encodeURIComponent(MSG[l](a[1][l]));});
+ document.getElementById("wa").href="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(MSG[l](ADV[0][1][l]));
+ document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+ try{localStorage.setItem("lang",l)}catch(e){}
+}
+document.querySelectorAll(".langs button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let q=(new URLSearchParams(location.search).get("lang")||"").toLowerCase(); if(q==="ua")q="uk";
+let saved=null; try{saved=localStorage.getItem("lang")}catch(e){}
+setLang(T[q]?q:(saved||"pl"));
 </script>
 </body></html>
